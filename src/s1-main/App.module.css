@@ -3,9 +3,32 @@
 }
 
 .hw {
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+}
+
+.font-link {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
 
 }
 
 .hwTitle {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    margin: 20px;
+}
 
+.chat {
+    margin: 0 auto;
+    background-color: #fcf6f1;
+    width: 600px;
+    height: 70vh;
+    border: solid 1px #EEE;
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px;
 }
