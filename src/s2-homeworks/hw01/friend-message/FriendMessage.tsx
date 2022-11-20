@@ -38,8 +38,7 @@ const FriendMessage = (props: MessagePropsType) => {
                 id={'hw1-friend-time-' + props.message.id}
                 className={s.friendTime}
             >
-                {props.message.message.time}
-            </div>
+                {props.message.message.time}            </div>
         </div>
     )
 }
