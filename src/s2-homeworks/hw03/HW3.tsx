@@ -1,36 +1,30 @@
-import React, { useState } from 'react'
-import { v1 } from 'uuid'
+import React, {useState} from 'react'
+import {v1} from 'uuid'
 import s2 from '../../s1-main/App.module.css'
 import GreetingContainer from './GreetingContainer'
 
 /*
-* 8 - в файле GreetingContainer.tsx вычислить количество добавленных и имя последнего (totalUsers, lastUserName)
-* 9 - в файле Greeting.tsx дописать типизацию пропсов
-* 10 - в файле Greeting.tsx вычислить inputClass в зависимости от наличия ошибки
 * 11 - сделать стили в соответствии с дизайном
 * */
 
 export type UserType = {
     _id: string
-    name: number
+    name: string
 }
 
 
-
-
-export const pureAddUserCallback = (name: string, setUsers: ([])=>void, users: UserType[]) => {
+export const pureAddUserCallback = (name: string, setUsers: ([]) => void, users: UserType[]) => {
     const user = {
         _id: v1(),
-        name:"name"
+        name: name
     }
     setUsers([...users, user])
 }
 
 
-
-
 const HW3 = () => {
     const [users, setUsers] = useState<UserType[]>([])
+    console.log('users: ', users)
 
     const addUserCallback = (name: string) => {
         pureAddUserCallback(name, setUsers, users)
