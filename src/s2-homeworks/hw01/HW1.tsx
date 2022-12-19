@@ -61,7 +61,6 @@ const HW1 = () => {
         <div id={'hw1'}>
             
             <div className={s2.hwTitle}>Homework #1</div>
-            <hr/>
             <div className={`${s2.fontLink} ${s2.hw}` }>
                 {/*проверка отображения (не менять)*/}
                 <div className={s2.chat}>

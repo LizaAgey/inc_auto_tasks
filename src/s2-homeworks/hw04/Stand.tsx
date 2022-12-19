@@ -7,7 +7,6 @@ import SuperButton from './common/c2-SuperButton/SuperButton'
 const Stand = () => {
     const [stateForAllInputs, setValue] = useState<string>('')
     const [error, setError] = useState<string>('')
-
     const [stateForAllCheckboxes, setChecked] = useState<boolean>(false)
 
     return (
@@ -21,6 +20,7 @@ const Stand = () => {
                         onChange={(e) => setValue(e.currentTarget.value)}
                     />
                 </div>
+
                 {/*инпут с ошибкой:*/}
                 <div>
                     <SuperInputText
@@ -28,6 +28,7 @@ const Stand = () => {
                         value={stateForAllInputs}
                         onChangeText={setValue}
                         error={error}
+                        //если при нажатии Enter  наш инпут заполнен, то очищаем его; если он был пуст - ошибка
                         onEnter={() => {
                             setError(
                                 stateForAllInputs.trim()
