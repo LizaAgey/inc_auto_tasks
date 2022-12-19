@@ -19,7 +19,6 @@ function Pages() {
                     path="/"
                     element={<Navigate to={PATH.JUNIOR_PLUS} replace />}
                 />
-                {/*<Route path="/"  element={<div>Main</div>}/>*/}
 
                 <Route path={'*'} element={<Error404/>}/>
                 <Route path={PATH.PRE_JUNIOR} element={<PreJunior/>}/>
