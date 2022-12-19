@@ -15,10 +15,12 @@ function Pages() {
     return (
         <div>
             <Routes>
-                <Route
-                    path="/"
-                    element={<Navigate to={PATH.PRE_JUNIOR} replace />}
-                />
+                {/*<Route*/}
+                {/*    path="/"*/}
+                {/*    element={<Navigate to={PATH.PRE_JUNIOR} replace />}*/}
+                {/*/>*/}
+                <Route path="/"  element={<div>Main</div>}/>
+
                 <Route path={'*'} element={<Error404/>}/>
                 <Route path={PATH.PRE_JUNIOR} element={<PreJunior/>}/>
                 <Route path={PATH.JUNIOR} element={<Junior/>}/>
