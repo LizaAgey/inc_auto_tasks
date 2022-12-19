@@ -5,7 +5,7 @@ aside {
 
 .sidebar {
     position: absolute;
-    visibility: hidden;
+    display: none;
     width: 317px;
     height: 100%;
     left: 0px;
@@ -16,6 +16,7 @@ aside {
 }
 
 .sidebar.open {
+    display: block;
     visibility: visible;
     z-index: 3;
 }
