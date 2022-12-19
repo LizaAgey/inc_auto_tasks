@@ -16,7 +16,6 @@ aside {
 
 .sidebar.open {
     left:0px;
-    visibility: visible;
     z-index: 3;
 }
 
