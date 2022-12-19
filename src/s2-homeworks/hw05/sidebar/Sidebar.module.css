@@ -5,10 +5,9 @@ aside {
 
 .sidebar {
     position: absolute;
-    display: none;
     width: 317px;
     height: 100%;
-    left: 0px;
+    left: -100%;
     top: 0px;
     background-color: white;
     border-right: 1px solid black;
@@ -16,7 +15,7 @@ aside {
 }
 
 .sidebar.open {
-    display: block;
+    left:0px;
     visibility: visible;
     z-index: 3;
 }
