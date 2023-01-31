@@ -1,22 +1,21 @@
 import React from 'react'
-import { UserType } from './HW8'
+import {UserType} from './HW8'
 import s from './HW8.module.css'
 
 // types
 type UserPropsType = {
-    u: UserType
+    user: UserType
 }
 
-const User: React.FC<UserPropsType> = ({ u }) => {
+const User: React.FC<UserPropsType> = ({user}) => {
     return (
-        <tr id={'hw8-user-' + u._id + '-' + u.age} className={s.item}>
-            <td id={'hw8-user-name-' + u._id} className={s.nameCol}>
+        <tr id={'hw8-user-' + user._id + '-' + user.age} className={s.item} key={user._id}>
+            <td id={'hw8-user-name-' + user._id} className={s.nameCol} >
                 {/*отобразить имя*/}
-
+               {user.name}
             </td>
-            <td id={'hw8-user-age-' + u._id}>
-                {/*отобразить возраст*/}
-
+            <td id={'hw8-user-age-' + user._id}>
+                {user.age}
             </td>
         </tr>
     )

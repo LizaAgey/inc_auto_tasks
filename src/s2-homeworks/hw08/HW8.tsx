@@ -17,7 +17,9 @@ export type UserType = {
     age: number
 }
 
-const initialPeople: UserType[] = [
+export type UserPage = Array<UserType>
+
+const initialPeople: UserPage = [
     // студенты могут поменять имя/возраст/количество объектов, _id должны быть целочисленные
     {_id: 0, name: 'Кот', age: 3},
     {_id: 1, name: 'Александр', age: 66},
@@ -27,11 +29,11 @@ const initialPeople: UserType[] = [
     {_id: 5, name: 'Ирина', age: 55},
 ]
 
-const HW8 = () => {
-    const [people, setPeople] = useState<UserType[]>(initialPeople)
+export const HW8 = () => {
+    const [people, setPeople] = useState<UserPage>(initialPeople)
     const [currentSort, setCurrentSort] = useState('')
 
-    const finalPeople = people.map((u: UserType) => <User key={u._id} u={u}/>)
+    const finalPeople = people.map((u: UserType) => <User key={u._id} user={u}/>)
 
     const sortUp = () => {
         setPeople(
